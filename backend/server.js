@@ -176,7 +176,7 @@ app.use(cors({
   app.use('/api/v1/auth', require('./routes/authRoute')); 
 
   // Serve React build files (This should be after all API routes)
-  app.use(express.static(path.join(__dirname, 'client/build')));
+  app.use(express.static(path.join(__dirname, '../client/build')));
   
   app.get('*', (req, res) => {
       res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
